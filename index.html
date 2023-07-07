@@ -28,15 +28,9 @@
 
     ul {
       list-style: none;
-      list-style-type: none;
-      padding: 0px;
-      margin: 0px;
     }
     li {
       display: inline-block;
-      list-style-type: none;
-      padding: 0px;
-      margin: 0px;
     }
     .Navbar {
       display: flex;
@@ -105,13 +99,12 @@
 
     .dropdown-menu li {
       display: block;
+      text-align:center;
     }
 
     .dropdown-menu li a {
       padding: 8px 12px;
     }
-
-    
 
     .dropdown:hover .dropdown-menu {
       display: block;
@@ -130,7 +123,6 @@
       padding: 8px 12px;
     }
 
-    
     .logo {
       padding-left: 40px;
       transform: scale(0.95);
@@ -157,7 +149,7 @@
       transform: scale(1.05);
     }
     h1 {
-      color: #aad255;
+      color: white;
       font-weight: bolder;
       font-size: 85px;
       margin: 0px 0px 30px 0px;
@@ -183,9 +175,20 @@
       position: absolute;
       top: 4%;
       left: -1000px;
-      background-color: rgba(255, 255, 255, 0.3);
+      background-color: rgba(255, 255, 255, 0.5);
       padding: 100px 300px 100px 100px;
       animation: slide-in 1s forwards;
+      animation-delay: 1s;
+    }
+    .aboutus {
+      position: absolute;
+      top: 14%;
+      left: -1000px;
+      background-color: rgba(255, 255, 255, 0);
+      padding: 100px 200px 100px 50px;
+      
+      animation: slide-in 1s forwards;
+      align-items: center;
       animation-delay: 1s;
     }
     .actualtext {
@@ -218,8 +221,7 @@
       text-align: center;
       font-size: 50px;
       font-weight: medium;
-      margin-bottom: 50px;
-      padding-bottom:20px;
+      margin-bottom: 20px;
     }
     h3 {
       color: black;
@@ -356,8 +358,11 @@
       color: #aad255;
     }
     .who_are_we {
-      margin: 40px 165px 0px 165px;
+      margin: 40px 100px 0px 100px;
       text-align: center;
+      color: black;
+      font-size: larger;
+      font-weight: bold;
     }
       @keyframes scroll {
         0% {
@@ -375,7 +380,6 @@
         overflow: hidden;
         position: relative;
         width: 950px;
-        margin-top:30px;
       }
       
       .slider::before,
@@ -413,7 +417,10 @@
         margin-top: 60px ;
       }
       .About {
-        margin-top: 40px;
+        margin-top: 0px;
+      }
+      .About img {
+        opacity: 50%;
       }
   </style>
   <script>
@@ -436,12 +443,16 @@
       });
     }
   </script>
+  
+  
+  
+  
   <body>
     <header>
       <div class="Navbar">
         <div class="logo">
           <a href="">
-            <img src="logo_eam.png" width="90" />
+            <img src="EAM_Tunisia_logo.jpg" width="90" />
           </a>
         </div>
         <ul class="menu">
@@ -476,7 +487,7 @@
     </header>
 
     <div class="container" id="home-section">
-      <img src="./Images/green_land.jpg" width="100%" />
+      <img src="./images/green_land.jpg" width="100%" />
       <div class="textbox">
         <div class="actualtext">
           <h1 class="EAM">EAM</h1>
@@ -489,20 +500,28 @@
           <span> <b>Consent</b> to operate </span>
         </div>
       </div>
+      <div class="container">
+
       <div class="About" id="about-section">
-        <h2>About Us</h2>
-        <div class="who_are_we">
-          Environmental Assessment & Management “EAM s.a.” is an experienced
-          safety and environmental consulting company established in Tunisia
-          since 1997. <br><br> EAM employs professionals and has a demonstrable track
-          record in safety, environmental and social impact assessment,
-          environmental due diligence, site investigation and remediation
-          services for exploration and production in oil and gas, power and
-          chemicals. <br> <br>EAM was granted the ISO-9001: Version 2000 certification on
-          behalf of its overall commitment to quality services, provided by the
-          efforts, perseverance and interest of all its personnel, and supported
-          by the initiative and creative impetus of the management officers.
-        </div>
+        <img src="./Images/centre-urbain.jpg" width="100%" />
+        <div class=" aboutus">
+          <div class="actualtext">
+            <h2>About Us</h2>
+            <div class="who_are_we">
+              Environmental Assessment & Management “EAM s.a.” is an experienced
+              safety and environmental consulting company established in Tunisia
+              since 1997. <br><br> EAM employs professionals and has a demonstrable track
+              record in safety, environmental and social impact assessment,
+              environmental due diligence, site investigation and remediation
+              services for exploration and production in oil and gas, power and
+              chemicals. <br> <br>EAM was granted the ISO-9001: Version 2000 certification on
+              behalf of its overall commitment to quality services, provided by the
+              efforts, perseverance and interest of all its personnel, and supported
+              by the initiative and creative impetus of the management officers.
+            </div>
+            </div>
+          </div>
+          </div>
       </div>
       <div class="services" id="services-section">
         <h2>Our Services</h2>
