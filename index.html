@@ -221,7 +221,7 @@
       text-align: center;
       font-size: 50px;
       font-weight: medium;
-      margin-bottom: 20px;
+      margin-bottom: 50px;
     }
     h3 {
       color: black;
@@ -266,8 +266,14 @@
     .black {
       background-color: black;
     }
+    .black:hover{
+      color: #aad255;
+    }
     .green {
       background-color: #aad255;
+    }
+    .green:hover{
+      color: black;
     }
     span {
       font-weight: medium;
@@ -420,7 +426,7 @@
         margin-top: 0px;
       }
       .About img {
-        opacity: 35%;
+        opacity: 30%;
       }
   </style>
   <script>
@@ -433,7 +439,7 @@
         const targetSection = document.querySelector(link.getAttribute('href'));
   
         if (targetSection) {
-          const offset = 100; // Adjust this value to set the desired offset
+          const offset = 100; 
   
           window.scrollTo({
             top: targetSection.offsetTop - offset,
@@ -443,10 +449,6 @@
       });
     }
   </script>
-  
-  
-  
-  
   <body>
     <header>
       <div class="Navbar">
@@ -478,6 +480,7 @@
               <li><a href="#">Hazard & Safety</a></li>
               <li><a href="#">Risk Assessment & Contaminated Sites Management</a></li>
               <li><a href="#">Social Projects</a></li>
+              <li><a href="#"><u>Other Projects</u></a></li>
             </ul>
           </li>
           <li class="ilink"><a href="#clients-section">Clients</a></li>
@@ -575,7 +578,7 @@
       </div>
     </div>
     <div class="testimonials" id="clients-section">
-      <h2>Our Clients</h2>
+      <h2 class="clientss">Our Clients</h2>
         <div class="carrousel">
           <div class="slider">
             <div class="slide-track">
