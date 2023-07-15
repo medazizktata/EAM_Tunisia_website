@@ -1,0 +1,1855 @@
+<!DOCTYPE html>
+<html lang="english">
+  <head>
+    <title>exported project</title>
+    <meta name="viewport" content="width=100%, initial-scale=0.67" />
+    <meta charset="utf-8" />
+
+    <style data-tag="reset-style-sheet">
+      html {
+        line-height: 1.15;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      * {
+        box-sizing: border-box;
+        border-width: 0;
+        border-style: solid;
+        max-width: 3000vh;
+      }
+      p,
+      li,
+      ul,
+      pre,
+      div,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      figure,
+      blockquote,
+      figcaption {
+        margin: 0;
+        padding: 0;
+      }
+      button {
+        background-color: transparent;
+      }
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        font-family: inherit;
+        font-size: 100%;
+        line-height: 1.15;
+        margin: 0;
+      }
+      button,
+      select {
+        text-transform: none;
+      }
+      button,
+      [type="button"],
+      [type="reset"],
+      [type="submit"] {
+        -webkit-appearance: button;
+      }
+      button::-moz-focus-inner,
+      [type="button"]::-moz-focus-inner,
+      [type="reset"]::-moz-focus-inner,
+      [type="submit"]::-moz-focus-inner {
+        border-style: none;
+        padding: 0;
+      }
+      button:-moz-focus,
+      [type="button"]:-moz-focus,
+      [type="reset"]:-moz-focus,
+      [type="submit"]:-moz-focus {
+        outline: 1px dotted ButtonText;
+      }
+      a {
+        color: inherit;
+        text-decoration: inherit;
+      }
+      input {
+        padding: 2px 4px;
+      }
+      img {
+        display: block;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style: normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+      }
+      a {
+        text-decoration: none;
+      }
+      a:active {
+        color: black;
+      }
+
+      a:visited {
+        color: black;
+      }
+
+      ul {
+        list-style: none;
+      }
+      li {
+        display: inline-block;
+      }
+      .Navbar {
+        display: flex;
+        background-color: white;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 4Opx;
+        width: 100%;
+        position: relative;
+        z-index: 9999;
+      }
+      .Navbar ul li a {
+        position: relative;
+        color: #1aacbb;
+      }
+      .Navbar ul li a:hover {
+        color: #aad255;
+      }
+      .Navbar ul li a::before {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background-color: #aad255;
+
+        transition: width 0.3s ease-in-out;
+      }
+
+      .Navbar ul li a:hover::before {
+        width: 100%;
+      }
+      .dropdown {
+        position: relative;
+      }
+
+      .dropdown-menu {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 230px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+      }
+
+      .dropdown:hover .dropdown-menu {
+        display: block;
+        opacity: 1;
+        animation-name: fade-in;
+      }
+
+      @keyframes fade-in {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      .dropdown-menu li {
+        display: block;
+        text-align: center;
+      }
+
+      .dropdown-menu li a {
+        padding: 8px 12px;
+      }
+
+      .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 4px;
+        opacity: 1;
+        transition-delay: 0.2s;
+      }
+
+      .dropdown-menu li {
+        display: block;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+
+      .dropdown-menu li a {
+        padding: 8px 12px;
+      }
+
+      .logo {
+        padding-left: 40px;
+        transform: scale(0.95);
+        transition: transform 0.2s ease-out;
+      }
+      .logo:hover {
+        transform: scale(1);
+        cursor: pointer;
+      }
+
+      .menu {
+        font-size: medium;
+        font-weight: bold;
+        display: flex;
+        column-gap: 20px;
+        padding: 50px;
+        align-items: center;
+        color: grey;
+      }
+      .ilink {
+        transition: transform 0.2s ease-out;
+      }
+      .ilink:hover {
+        transform: scale(1.05);
+      }
+      form {
+        display: flex;
+        border: none;
+        outline: none;
+        flex-direction: column;
+        padding: 0px 350px;
+      }
+
+      form label {
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 0px 5px 0px;
+        width: 100%;
+      }
+      form button {
+        background: black;
+        color: white;
+        padding: 10px 30px;
+        font-size: medium;
+        font-weight: bold;
+        border: none;
+        margin-top: 15px;
+        display: block;
+        margin-bottom: 100px;
+      }
+      @keyframes wiggle {
+        0% {
+          transform: rotate(0deg);
+        }
+        25% {
+          transform: rotate(-2deg);
+        }
+        75% {
+          transform: rotate(2deg);
+        }
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+      form button:hover {
+        cursor: pointer;
+        animation: wiggle 0.5s ease-in-out 2;
+      }
+      form input {
+        height: 40px;
+        border-top: 1px #aad255;
+        border-left: none;
+        border-right: none;
+        margin-bottom: 10px;
+      }
+      input:focus {
+        border-color: #aad255;
+      }
+      textarea {
+        margin: 5px 0px;
+        resize: none;
+        border-top: 1cm;
+        border-left: none;
+        border-right: none;
+      }
+      footer span {
+        text-align: center;
+        padding: 0px;
+        margin: 30px 0;
+      }
+      .footer img {
+        display: block;
+        margin: auto;
+      }
+      .footer a:visited {
+        color: black;
+      }
+      .footer a:hover {
+        color: #aad255;
+      }
+    .formulaire {
+      display: block;
+    }
+    #nv {
+      font-family: "Montserrat", sans-serif;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="Navbar" id="nv">
+        <div class="logo">
+          <a href="">
+            <img src="logo_eam.png" width="90" />
+          </a>
+        </div>
+        <ul class="menu">
+          <li class="ilink"><a href="#home-section">Home</a></li>
+          <li class="ilink"><a href="#about-section">About</a></li>
+          <li class="dropdown">
+            <a href="#services-section">Services</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#"
+                  >Environmental Impact <br />Assessment & Management</a
+                >
+              </li>
+              <li><a href="#">Renewable Energies</a></li>
+              <li><a href="#">Oil & Gas</a></li>
+              <li><a href="#">Harbor & Terminal</a></li>
+              <li><a href="#">Hazard & Safety</a></li>
+              <li><a href="#">Social & Stakeholder Engagement</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#projects-section">Projects</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Wind & Solar Energies</a></li>
+              <li><a href="#">Harbors & Terminals</a></li>
+              <li><a href="#">Oil & Gas</a></li>
+              <li><a href="#">Hazard & Safety</a></li>
+              <li>
+                <a href="#">Risk Assessment & Contaminated Sites Management</a>
+              </li>
+              <li><a href="#">Social Projects</a></li>
+              <li>
+                <a href="#"><u>Other Projects</u></a>
+              </li>
+            </ul>
+          </li>
+          <li class="ilink"><a href="#clients-section">Clients</a></li>
+          <li class="ilink"><a href="#contact-section">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div>
+      <link href="./index.css" rel="stylesheet" />
+
+      <div class="frame0-container">
+        <div class="frame0-frame0">
+          <div class="frame0-frame"><div class="frame0-divcontent"></div></div>
+          <div class="frame0-frame1">
+            <div class="frame0-divcontent1">
+              <div class="frame0-main">
+                <div class="frame0-divconsultancydetails">
+                  <div class="frame0-divprofilecontent">
+                    <div class="frame0-heading1">
+                      <span class="frame0-text">
+                        <span class="frame0-text001">EAM |</span>
+                        <span>Projects</span>
+                      </span>
+                    </div>
+                    <span class="frame0-text003">
+                      <span>
+                        An overview of EAM projects in Tunisia and worldwide:
+                      </span>
+                    </span>
+                    <div class="frame0-item">
+                      <img
+                        src="public/external/image134123-z4h-900w.png"
+                        alt="image134123"
+                        class="frame0-image13"
+                      />
+                      <img
+                        src="public/external/rectangle24123-ln4.svg"
+                        alt="Rectangle24123"
+                        class="frame0-rectangle2"
+                      />
+                      <span class="frame0-text005">
+                        <span>
+                          <span>HARBOUR &amp; TERMINAL</span>
+                          <br />
+                          <span>PROJECTS</span>
+                        </span>
+                      </span>
+                    </div>
+                    <div class="frame0-item01">
+                      <div class="frame0-divnewsiteminfo">
+                        <div class="frame0-link">
+                          <div class="frame0-spanhomenewsitem">
+                            <span class="frame0-text010">
+                              <span>
+                                <span>
+                                  Environmental monitoring campaign of the
+                                  dredged
+                                </span>
+                                <br />
+                                <span>
+                                  material disposal site at the commercial port
+                                  of Zarzis
+                                </span>
+                              </span>
+                            </span>
+                          </div>
+                          <div class="frame0-spanhomenewsdescription">
+                            <span class="frame0-text015">
+                              <span>
+                                the study area's characteristics, physical
+                                monitoring, physico-chemical monitoring,
+                                biological monitoring ...
+                              </span>
+                            </span>
+                          </div>
+                          <span class="frame0-text017">
+                            <span>2018 - 2021</span>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="frame0-divnewsimg">
+                        <div class="frame0-link-figure">
+                          <img
+                            src="public/external/image204123-g64-200h.png"
+                            alt="image204123"
+                            class="frame0-image20"
+                          />
+                        </div>
+                      </div>
+                      <div class="frame0-divsourcename">
+                        <span class="frame0-text019">
+                          <span>Zarzis | Tunisia</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="frame0-divnewsiteminfo01">
+                      <div class="frame0-link01">
+                        <div class="frame0-spanhomenewsitem01">
+                          <span class="frame0-text021">
+                            <span>
+                              EI Notice of the construction works of berths No .
+                              8 and No . 9 for containers at Rades commercial
+                              port
+                            </span>
+                          </span>
+                        </div>
+                        <div class="frame0-spanhomenewsdescription01">
+                          <span class="frame0-text023">
+                            <span>
+                              As a part part of the constitution of the dossier
+                              of the OMMP at the commercial port of Rades.
+                            </span>
+                          </span>
+                        </div>
+                      </div>
+                      <span class="frame0-text025"><span>2019</span></span>
+                    </div>
+                    <div class="frame0-divnewsimg01">
+                      <img
+                        src="public/external/image374123-6g75-200h.png"
+                        alt="image374123"
+                        class="frame0-image37"
+                      />
+                    </div>
+                    <div class="frame0-divsourcename01">
+                      <span class="frame0-text027">
+                        <span>Rades | Tunisia</span>
+                      </span>
+                    </div>
+                    <div class="frame0-link02">
+                      <div class="frame0-spanhomenewsitem02">
+                        <span class="frame0-text029">
+                          <span>
+                            EI Notice of the construction works of berths No . 8
+                            and No . 9 for containers at the commercial port of
+                            Radès
+                          </span>
+                        </span>
+                      </div>
+                      <div class="frame0-spanhomenewsdescription02">
+                        <span class="frame0-text031">
+                          <span>
+                            As a part part of the constitution of the dossier of
+                            the OMMP at the commercial port of Rades.
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                    <span class="frame0-text033"><span>2007</span></span>
+                    <div class="frame0-divnewsimg02">
+                      <img
+                        src="public/external/image394123-g55-200h.png"
+                        alt="image394123"
+                        class="frame0-image39"
+                      />
+                    </div>
+                    <div class="frame0-divsourcename02">
+                      <span class="frame0-text035">
+                        <span>Rades | Tunisia</span>
+                      </span>
+                    </div>
+                    <div class="frame0-item02">
+                      <div class="frame0-divnewsiteminfo02">
+                        <div class="frame0-link03">
+                          <div class="frame0-spanhomenewsitem03">
+                            <span class="frame0-text037">
+                              <span>
+                                Environmental Impact Assessment for Port Complex
+                                La Goulette – Rades dredging
+                              </span>
+                            </span>
+                          </div>
+                          <div class="frame0-spanhomenewsdescription03">
+                            <span class="frame0-text039">
+                              <span>
+                                EIA for Port Complex La Goulette – Rades
+                                dredging, Tunisia . The report was prepared in
+                                accordance to the Tunisian regulation.
+                              </span>
+                            </span>
+                          </div>
+                          <span class="frame0-text041"><span>2007</span></span>
+                        </div>
+                      </div>
+                      <div class="frame0-divnewsimg03">
+                        <div class="frame0-link-figure01">
+                          <img
+                            src="public/external/image404123-eckb-200h.png"
+                            alt="image404123"
+                            class="frame0-image40"
+                          />
+                        </div>
+                      </div>
+                      <div class="frame0-divsourcename03">
+                        <span class="frame0-text043">
+                          <span>Tunis | Tunisia</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="frame0-item03">
+                      <div class="frame0-divnewsiteminfo03">
+                        <div class="frame0-link04">
+                          <div class="frame0-spanhomenewsitem04">
+                            <span class="frame0-text045">
+                              <span>
+                                Identification and characterization of sites for
+                                disposal of dredged material disposal sites from
+                                commercial ports
+                              </span>
+                            </span>
+                          </div>
+                          <div class="frame0-spanhomenewsdescription04">
+                            <span class="frame0-text047">
+                              <span>As a part part of an OMMP project.</span>
+                            </span>
+                          </div>
+                          <span class="frame0-text049">
+                            <span>2002 - 2007</span>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="frame0-divnewsimg04">
+                        <img
+                          src="public/external/image414123-fnoa-200h.png"
+                          alt="image414123"
+                          class="frame0-image41"
+                        />
+                      </div>
+                      <div class="frame0-divsourcename04">
+                        <span class="frame0-text051">
+                          <span>Tunisia | Africa</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="frame0-item04">
+                      <div class="frame0-divnewsiteminfo04">
+                        <div class="frame0-link05">
+                          <div class="frame0-spanhomenewsitem05">
+                            <span class="frame0-text053">
+                              <span>
+                                Study for the identification of dredged material
+                                dumping sites in commercial ports
+                              </span>
+                            </span>
+                          </div>
+                          <div class="frame0-spanhomenewsdescription05">
+                            <span class="frame0-text055">
+                              <span>As a part part of an OMMP project.</span>
+                            </span>
+                          </div>
+                          <span class="frame0-text057"><span>2006</span></span>
+                        </div>
+                      </div>
+                      <div class="frame0-divnewsimg05">
+                        <img
+                          src="public/external/image424124-oi88-200h.png"
+                          alt="image424124"
+                          class="frame0-image42"
+                        />
+                      </div>
+                      <div class="frame0-divsourcename05">
+                        <span class="frame0-text059">
+                          <span>Tunisia | Africa</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="frame0-item05">
+                      <div class="frame0-divnewsiteminfo05">
+                        <div class="frame0-link06">
+                          <div class="frame0-spanhomenewsitem06">
+                            <span class="frame0-text061">
+                              <span>
+                                EIA of the maintenance dredging of the berths
+                                No.1 and No.2 at the La Goulette commercial port
+                              </span>
+                            </span>
+                          </div>
+                          <div class="frame0-spanhomenewsdescription06">
+                            <span class="frame0-text063">
+                              <span>
+                                EAM has carried out a sampling campaign in
+                                September 2019 in front of berths No . 1 and No
+                                . 2 of the commercial port of La Goulette.
+                              </span>
+                            </span>
+                          </div>
+                        </div>
+                        <span class="frame0-text065"><span>2019</span></span>
+                      </div>
+                      <div class="frame0-divnewsimg06">
+                        <img
+                          src="public/external/image364124-40kl-200h.png"
+                          alt="image364124"
+                          class="frame0-image36"
+                        />
+                      </div>
+                      <div class="frame0-divsourcename06">
+                        <span class="frame0-text067">
+                          <span>La Goulette | Tunisia</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="frame0-item06">
+                      <div class="frame0-divnewsiteminfo06">
+                        <div class="frame0-link07">
+                          <div class="frame0-spanhomenewsitem07">
+                            <span class="frame0-text069">
+                              <span>
+                                EI Notice for the construction project of a
+                                cereal terminal at the commercial port of Radès
+                              </span>
+                            </span>
+                          </div>
+                          <div class="frame0-spanhomenewsdescription07">
+                            <span class="frame0-text071">
+                              <span>
+                                Drawn up in accordance with the terms of
+                                reference established by the National Agency of
+                                Environment Protection ANPE for port projects.
+                              </span>
+                            </span>
+                          </div>
+                        </div>
+                        <span class="frame0-text073"><span>2019</span></span>
+                      </div>
+                      <div class="frame0-divnewsimg07">
+                        <img
+                          src="public/external/image384124-mjs-200h.png"
+                          alt="image384124"
+                          class="frame0-image38"
+                        />
+                      </div>
+                      <div class="frame0-divsourcename07">
+                        <span class="frame0-text075">
+                          <span>Rades | Tunisia</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="frame0-item07">
+              <div class="frame0-divnewsimg08">
+                <div class="frame0-link-figure02">
+                  <img
+                    src="public/external/image54122-gbz-1200w.png"
+                    alt="image54122"
+                    class="frame0-image5"
+                  />
+                  <img
+                    src="public/external/rectangle14122-cj2c.svg"
+                    alt="Rectangle14122"
+                    class="frame0-rectangle1"
+                  />
+                  <span class="frame0-text077">
+                    <span>
+                      <span>WIND &amp; SOLAR</span>
+                      <br />
+                      <span>ENERGIES PROJECTS</span>
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="frame0-item08">
+              <div class="frame0-divnewsiteminfo07">
+                <div class="frame0-link08">
+                  <div class="frame0-spanhomenewsitem08">
+                    <span class="frame0-text082">
+                      <span>
+                        <span>
+                          Environmental &amp; Social Impact Assessment
+                        </span>
+                        <br />
+                        <span>of 04 Photovoltaic power plants</span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="frame0-spanhomenewsdescription08"></div>
+                  <span class="frame0-text087"><span>2019</span></span>
+                </div>
+              </div>
+              <img
+                src="public/external/image74122-1srh-200h.png"
+                alt="image74122"
+                class="frame0-image7"
+              />
+              <div class="frame0-divsourcename08">
+                <span class="frame0-text089">
+                  <span>Tunisia | Africa</span>
+                </span>
+              </div>
+              <span class="frame0-text091">
+                <span>
+                  <span>
+                    An analysis of the potential environmental impacts in Sfax,
+                  </span>
+                  <br />
+                  <span>Kasserine, Kébili and Tataouine.</span>
+                </span>
+              </span>
+            </div>
+            <div class="frame0-item09">
+              <div class="frame0-divnewsiteminfo08">
+                <div class="frame0-link09">
+                  <div class="frame0-spanhomenewsitem09">
+                    <span class="frame0-text096">
+                      <span>
+                        <span>
+                          Environmental &amp; safety Impact Assessment
+                        </span>
+                        <br />
+                        <span>of the 30 MW Wind</span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="frame0-spanhomenewsdescription09">
+                    <span class="frame0-text101">
+                      <span>
+                        An analysis of the potential environmental impacts of
+                        the project
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="frame0-divnewsimg09">
+                <div class="frame0-link-figure03">
+                  <img
+                    src="public/external/image114122-9skh-200h.png"
+                    alt="image114122"
+                    class="frame0-image11"
+                  />
+                </div>
+              </div>
+              <div class="frame0-divsourcename09">
+                <span class="frame0-text103">
+                  <span>Mateur - Bizerte | Tunisia</span>
+                </span>
+              </div>
+            </div>
+            <div class="frame0-item10">
+              <div class="frame0-divnewsiteminfo09">
+                <div class="frame0-link10">
+                  <div class="frame0-spanhomenewsitem10">
+                    <span class="frame0-text105">
+                      <span>
+                        Environmental &amp; safety Impact Assessment of the 10
+                        MW Photovoltaic power plant
+                      </span>
+                    </span>
+                  </div>
+                  <div class="frame0-spanhomenewsdescription10">
+                    <span class="frame0-text107">
+                      <span>
+                        An analysis of the potential environmental impacts of
+                        the project
+                      </span>
+                    </span>
+                  </div>
+                  <span class="frame0-text109"><span>2017</span></span>
+                </div>
+              </div>
+              <img
+                src="public/external/image84122-y0fv-200h.png"
+                alt="image84122"
+                class="frame0-image8"
+              />
+              <div class="frame0-divsourcename10">
+                <span class="frame0-text111">
+                  <span>Kebili | Tunisia</span>
+                </span>
+              </div>
+            </div>
+            <div class="frame0-item11">
+              <div class="frame0-divnewsiteminfo10">
+                <div class="frame0-link11">
+                  <div class="frame0-spanhomenewsitem11">
+                    <span class="frame0-text113">
+                      <span>
+                        Birds &amp; Bats studies in Jbel Kesra &amp; Serj in the
+                        378 MW wind park project area
+                      </span>
+                    </span>
+                  </div>
+                  <div class="frame0-spanhomenewsdescription11">
+                    <span class="frame0-text115">
+                      <span>
+                        Seasonal bat surveys and bird surveys for migratory,
+                        breeding, and wintering species...
+                      </span>
+                    </span>
+                  </div>
+                  <span class="frame0-text117"><span>2017</span></span>
+                </div>
+              </div>
+              <div class="frame0-divnewsimg10">
+                <div class="frame0-link-figure04">
+                  <img
+                    src="public/external/image354122-t7p7-200h.png"
+                    alt="image354122"
+                    class="frame0-image35"
+                  />
+                </div>
+              </div>
+              <div class="frame0-divsourcename11">
+                <span class="frame0-text119">
+                  <span>Siliana | Tunisia</span>
+                </span>
+              </div>
+            </div>
+            <div class="frame0-item12">
+              <div class="frame0-divnewsiteminfo11">
+                <div class="frame0-link12">
+                  <div class="frame0-spanhomenewsitem12">
+                    <span class="frame0-text121">
+                      <span>
+                        Birds &amp; Bats studies in Toujane in the 270MW wind
+                        park project area
+                      </span>
+                    </span>
+                  </div>
+                  <div class="frame0-spanhomenewsdescription12">
+                    <span class="frame0-text123">
+                      <span>
+                        Bat and bird surveys in accordance with IFC Performance
+                        Standard 6.
+                      </span>
+                    </span>
+                  </div>
+                  <span class="frame0-text125"><span>2016</span></span>
+                </div>
+              </div>
+              <div class="frame0-divnewsimg11">
+                <div class="frame0-link-figure05">
+                  <img
+                    src="public/external/image154122-v2gd-200h.png"
+                    alt="image154122"
+                    class="frame0-image15"
+                  />
+                </div>
+              </div>
+              <div class="frame0-divsourcename12">
+                <span class="frame0-text127"><span>Gabes | Tunisia</span></span>
+              </div>
+            </div>
+            <div class="frame0-item13">
+              <div class="frame0-divnewsiteminfo12">
+                <div class="frame0-link13">
+                  <div class="frame0-spanhomenewsitem13">
+                    <span class="frame0-text129">
+                      <span>
+                        Environmental &amp; Safety Impact Assessment of the 10
+                        MW Photovoltaic power plant
+                      </span>
+                    </span>
+                  </div>
+                  <div class="frame0-spanhomenewsdescription13">
+                    <span class="frame0-text131">
+                      <span>
+                        Detailed project analysis : technical details,
+                        ecological assessment, ...
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="frame0-divnewsimg12">
+                <div class="frame0-link-figure06">
+                  <img
+                    src="public/external/image94122-b7f5-200h.png"
+                    alt="image94122"
+                    class="frame0-image9"
+                  />
+                </div>
+              </div>
+              <div class="frame0-divsourcename13">
+                <span class="frame0-text133">
+                  <span>Medenine | Tunisia</span>
+                </span>
+              </div>
+            </div>
+            <div class="frame0-item14">
+              <div class="frame0-divnewsiteminfo13">
+                <div class="frame0-link14">
+                  <div class="frame0-spanhomenewsitem14">
+                    <span class="frame0-text135">
+                      <span>
+                        Environmental &amp; safety Impact Assessment of the 1 MW
+                        Photovoltaic power plant
+                      </span>
+                    </span>
+                  </div>
+                  <div class="frame0-spanhomenewsdescription14">
+                    <span class="frame0-text137">
+                      <span>
+                        An analysis of the potential environmental impacts of
+                        the project
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="frame0-divnewsimg13">
+                <div class="frame0-link-figure07">
+                  <img
+                    src="public/external/image104123-mkjl-400w.png"
+                    alt="image104123"
+                    class="frame0-image10"
+                  />
+                </div>
+              </div>
+              <div class="frame0-divsourcename14">
+                <span class="frame0-text139">
+                  <span>Enfidha | Tunisia</span>
+                </span>
+              </div>
+            </div>
+            <div class="frame0-item15">
+              <div class="frame0-divnewsiteminfo14">
+                <div class="frame0-link15">
+                  <div class="frame0-spanhomenewsitem15">
+                    <span class="frame0-text141">
+                      <span>
+                        <span>Environmental</span>
+                        <br />
+                        <span>&amp; safety Impact</span>
+                        <br />
+                        <span>Assessment of the 30 MW Wind farm</span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="frame0-spanhomenewsdescription15">
+                    <span class="frame0-text148">
+                      <span>
+                        Detailed project analysis : technical details,
+                        ecological assessment, ...
+                      </span>
+                    </span>
+                  </div>
+                  <span class="frame0-text150"><span>2017</span></span>
+                </div>
+              </div>
+              <div class="frame0-divnewsimg14">
+                <div class="frame0-link-figure08">
+                  <img
+                    src="public/external/image144123-7klf-200h.png"
+                    alt="image144123"
+                    class="frame0-image14"
+                  />
+                </div>
+              </div>
+              <div class="frame0-divsourcename15">
+                <span class="frame0-text152">
+                  <span>Thala - Kasserine | Tunisia</span>
+                </span>
+              </div>
+            </div>
+            <div class="frame0-item16">
+              <div class="frame0-divnewsimg15">
+                <img
+                  src="public/external/image344123-5crq-200h.png"
+                  alt="image344123"
+                  class="frame0-image34"
+                />
+              </div>
+              <div class="frame0-divsourcename16">
+                <span class="frame0-text154">
+                  <span>Bir Al Huffay - Sidi Bouzid | Tunisia</span>
+                </span>
+              </div>
+              <div class="frame0-divnewsiteminfo15">
+                <div class="frame0-link16">
+                  <div class="frame0-spanhomenewsitem16">
+                    <span class="frame0-text156">
+                      <span>
+                        <span>
+                          Environmental &amp; Social Impact Assessment
+                        </span>
+                        <br />
+                        <span>of the 10 MW Photovoltaic power plant</span>
+                        <br />
+                        <span></span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="frame0-spanhomenewsdescription16">
+                    <span class="frame0-text163">
+                      <span>
+                        Detailed project analysis : technical details,
+                        ecological assessment, ...
+                      </span>
+                    </span>
+                    <span class="frame0-text165">
+                      Detailed project analysis : technical details, ecological
+                      assessment, ...
+                    </span>
+                  </div>
+                  <span class="frame0-text166"><span>2019</span></span>
+                </div>
+              </div>
+            </div>
+            <div class="frame0-divnewsimg16">
+              <img
+                src="public/external/image314126-rjzh-600w.png"
+                alt="image314126"
+                class="frame0-image31"
+              />
+            </div>
+            <img
+              src="public/external/rectangle44126-haxc.svg"
+              alt="Rectangle44126"
+              class="frame0-rectangle4"
+            />
+            <span class="frame0-text168">
+              <span>
+                RISK ASSESSMENT &amp; CONTAMINATED SITES MANAGEMENT PROJECTS
+              </span>
+            </span>
+            <img
+              src="public/external/image574126-qbs-300h.png"
+              alt="image574126"
+              class="frame0-image57"
+            />
+            <img
+              src="public/external/image584126-j3d-300h.png"
+              alt="image584126"
+              class="frame0-image58"
+            />
+            <img
+              src="public/external/image594126-h25of-600h.png"
+              alt="image594126"
+              class="frame0-image59"
+            />
+            <img
+              src="public/external/image604126-pxob-500h.png"
+              alt="image604126"
+              class="frame0-image60"
+            />
+            <img
+              src="public/external/image614126-4g18-400w.png"
+              alt="image614126"
+              class="frame0-image61"
+            />
+            <img
+              src="public/external/image564126-svlc-600w.png"
+              alt="image564126"
+              class="frame0-image56"
+            />
+          </div>
+          <div class="frame0-item17">
+            <div class="frame0-divnewsimg17">
+              <div class="frame0-link-figure09">
+                <img
+                  src="public/external/image174124-0red-1600w.png"
+                  alt="image174124"
+                  class="frame0-image17"
+                />
+                <img
+                  src="public/external/rectangle34124-2q9.svg"
+                  alt="Rectangle34124"
+                  class="frame0-rectangle3"
+                />
+                <span class="frame0-text170">
+                  <span>
+                    <span>OIL &amp; GAS</span>
+                    <br />
+                    <span>PROJECTS</span>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="frame0-item18">
+            <div class="frame0-divnewsiteminfo16">
+              <div class="frame0-link17">
+                <span class="frame0-text175">
+                  <span>EIA for offshore 2D seismic survey</span>
+                </span>
+                <div class="frame0-spanhomenewsdescription17">
+                  <span class="frame0-text177">
+                    <br />
+                    <span>
+                      Environmental impact assessment related to the proposed
+                      seismic survey on the offshore Rafraf &amp; Azmour Blocks
+                      in Northern Tunisia
+                    </span>
+                  </span>
+                </div>
+                <span class="frame0-text180"><span>2011</span></span>
+              </div>
+            </div>
+            <div class="frame0-divnewsimg18">
+              <img
+                src="public/external/image444124-mxyj-200h.png"
+                alt="image444124"
+                class="frame0-image44"
+              />
+            </div>
+            <div class="frame0-divsourcename17">
+              <span class="frame0-text182"><span>Rafraf | Tunisia</span></span>
+            </div>
+          </div>
+          <div class="frame0-item19">
+            <div class="frame0-divnewsiteminfo17">
+              <div class="frame0-link18">
+                <div class="frame0-spanhomenewsitem17">
+                  <span class="frame0-text184">
+                    <span>
+                      ESIA of the Sakr-1 well in the offshore exploration
+                      licence Sfax-Gulf of Gabès
+                    </span>
+                  </span>
+                </div>
+                <div class="frame0-spanhomenewsdescription18">
+                  <span class="frame0-text186">
+                    <span>
+                      The ESIA included a description of the drilling
+                      operations, a presentation of the DNO Tunisia AS policy on
+                      HSE...
+                    </span>
+                  </span>
+                </div>
+                <span class="frame0-text188"><span>2017</span></span>
+              </div>
+            </div>
+            <div class="frame0-divnewsimg19">
+              <div class="frame0-link-figure10">
+                <img
+                  src="public/external/image494124-hc7t-200h.png"
+                  alt="image494124"
+                  class="frame0-image49"
+                />
+              </div>
+            </div>
+            <div class="frame0-divsourcename18">
+              <span class="frame0-text190"><span>Gabes | Tunisia</span></span>
+            </div>
+          </div>
+          <div class="frame0-item20">
+            <div class="frame0-divnewsiteminfo18">
+              <div class="frame0-link19">
+                <div class="frame0-spanhomenewsitem18">
+                  <span class="frame0-text192">
+                    <span>
+                      EIA of the production center of the Baraka field in
+                      Tazerka
+                    </span>
+                  </span>
+                </div>
+                <div class="frame0-spanhomenewsdescription19">
+                  <span class="frame0-text194">
+                    <span>
+                      An analysis of the potential environmental impacts of the
+                      production center
+                    </span>
+                  </span>
+                </div>
+                <span class="frame0-text196"><span>2008 - 2009</span></span>
+              </div>
+            </div>
+            <img
+              src="public/external/image484124-aiir-200h.png"
+              alt="image484124"
+              class="frame0-image48"
+            />
+            <div class="frame0-divsourcename19">
+              <span class="frame0-text198"><span>Tazeka | Tunisia</span></span>
+            </div>
+          </div>
+          <div class="frame0-item21">
+            <div class="frame0-divnewsiteminfo19">
+              <div class="frame0-link20">
+                <div class="frame0-spanhomenewsitem19"></div>
+                <span class="frame0-text200">
+                  <span>
+                    EIA of well stimulation work Miskar A-01 , A-04 , A-05,
+                    A-07ST1, A-14, A-15, A-16 and A-17
+                  </span>
+                </span>
+                <div class="frame0-spanhomenewsdescription20">
+                  <span class="frame0-text202">
+                    <span>
+                      An analysis of the potential environmental impacts of the
+                      exploration wells
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <span class="frame0-text204"><span>2018 - 2019</span></span>
+            </div>
+            <div class="frame0-divnewsimg20">
+              <img
+                src="public/external/image464124-e6s-200h.png"
+                alt="image464124"
+                class="frame0-image46"
+              />
+            </div>
+            <div class="frame0-divsourcename20">
+              <span class="frame0-text206"><span>Gabes | Tunisia</span></span>
+            </div>
+          </div>
+          <div class="frame0-item22">
+            <div class="frame0-divnewsiteminfo20">
+              <div class="frame0-link21">
+                <div class="frame0-spanhomenewsitem20">
+                  <span class="frame0-text208">
+                    <span>
+                      Technical Determination Study of the Douleb field
+                      production center
+                    </span>
+                  </span>
+                </div>
+                <div class="frame0-spanhomenewsdescription21">
+                  <span class="frame0-text210">
+                    <span>
+                      The work done by EAM consists of a presentation of
+                      SEREPT's policy in terms of HSE, ...
+                    </span>
+                  </span>
+                </div>
+                <span class="frame0-text212"><span>2014</span></span>
+              </div>
+            </div>
+            <div class="frame0-divnewsimg21">
+              <img
+                src="public/external/image504124-lk2-200h.png"
+                alt="image504124"
+                class="frame0-image50"
+              />
+            </div>
+            <div class="frame0-divsourcename21">
+              <span class="frame0-text214">
+                <span>Kasserine | Tunisia</span>
+              </span>
+            </div>
+          </div>
+          <div class="frame0-item23">
+            <div class="frame0-divnewsiteminfo21">
+              <div class="frame0-link22">
+                <div class="frame0-spanhomenewsitem21">
+                  <span class="frame0-text216">
+                    <span>
+                      EIA of the Jebel Kebir KB#2 exploration well in the North
+                      Research Permit Chotts
+                    </span>
+                  </span>
+                </div>
+                <div class="frame0-spanhomenewsdescription22">
+                  <span class="frame0-text218">
+                    <span>
+                      An analysis of the potential environmental impacts of the
+                      exploration well
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <span class="frame0-text220"><span>2017</span></span>
+            </div>
+            <div class="frame0-divnewsimg22">
+              <img
+                src="public/external/image454125-keqb-200h.png"
+                alt="image454125"
+                class="frame0-image45"
+              />
+            </div>
+            <div class="frame0-divsourcename22">
+              <span class="frame0-text222"><span>Bizerte | Tunisia</span></span>
+            </div>
+          </div>
+          <div class="frame0-item24">
+            <div class="frame0-divnewsiteminfo22">
+              <div class="frame0-link23">
+                <div class="frame0-spanhomenewsitem22">
+                  <span class="frame0-text224">
+                    <span>Oil depot located at Petroleum Zone of Rades</span>
+                  </span>
+                </div>
+                <div class="frame0-spanhomenewsdescription23"></div>
+                <span class="frame0-text226">
+                  <span>
+                    EAM has been contracted for the preparation of the SNDP
+                    Hydrocarbon Depot Redevelopment and Upgrading Project.
+                  </span>
+                </span>
+                <span class="frame0-text228"><span>2017</span></span>
+              </div>
+            </div>
+            <div class="frame0-divnewsimg23">
+              <div class="frame0-link-figure11">
+                <img
+                  src="public/external/image554125-17d-200h.png"
+                  alt="image554125"
+                  class="frame0-image55"
+                />
+              </div>
+            </div>
+            <div class="frame0-divsourcename23">
+              <span class="frame0-text230"><span>Rades | Tunisia</span></span>
+            </div>
+          </div>
+          <div class="frame0-item25">
+            <div class="frame0-divnewsiteminfo23">
+              <div class="frame0-link24">
+                <div class="frame0-spanhomenewsitem23">
+                  <span class="frame0-text232">
+                    <span>Oil Depot located at La Skhira</span>
+                  </span>
+                </div>
+                <span class="frame0-text234"><span>2016</span></span>
+                <div class="frame0-spanhomenewsdescription24"></div>
+                <span class="frame0-text236">
+                  <span>
+                    The project aimed at adding two new tanks the oil depot of
+                    TANKMED.
+                  </span>
+                </span>
+              </div>
+            </div>
+            <img
+              src="public/external/image544125-9db4-200h.png"
+              alt="image544125"
+              class="frame0-image54"
+            />
+            <div class="frame0-divsourcename24">
+              <span class="frame0-text238">
+                <span>La Skhira | Tunisia</span>
+              </span>
+            </div>
+          </div>
+          <div class="frame0-item26">
+            <div class="frame0-divnewsiteminfo24">
+              <div class="frame0-link25">
+                <div class="frame0-spanhomenewsitem24">
+                  <span class="frame0-text240">
+                    <span>Oum Echieh Storage and Pumping Station</span>
+                  </span>
+                </div>
+                <div class="frame0-spanhomenewsdescription25"></div>
+                <span class="frame0-text242">
+                  <span>
+                    EAM has been contracted for the preparation of the
+                    classified establishment file for the Oum Echieh Storage and
+                    Pumping Station, in Gabès.
+                  </span>
+                </span>
+                <span class="frame0-text244"><span>2014</span></span>
+              </div>
+            </div>
+            <div class="frame0-divnewsimg24">
+              <img
+                src="public/external/image534125-m8v-200h.png"
+                alt="image534125"
+                class="frame0-image53"
+              />
+            </div>
+            <div class="frame0-divsourcename25">
+              <span class="frame0-text246"><span>Gabes | Tunisia</span></span>
+            </div>
+          </div>
+          <div class="frame0-item27">
+            <div class="frame0-divnewsiteminfo25">
+              <div class="frame0-link26">
+                <div class="frame0-spanhomenewsitem25">
+                  <span class="frame0-text248">
+                    <span>Bir Ben Tartar Production Center</span>
+                  </span>
+                </div>
+                <div class="frame0-spanhomenewsdescription26">
+                  <span class="frame0-text250">
+                    <span>
+                      <span></span>
+                      <br />
+                      <span>
+                        EAM has been contracted for the preparation of the
+                        classified establishment file for the Bir Ben Tartar
+                        production center, in Tataouine.
+                      </span>
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <span class="frame0-text255"><span>2019</span></span>
+            </div>
+            <div class="frame0-divnewsimg25">
+              <img
+                src="public/external/image514125-mgxa-200h.png"
+                alt="image514125"
+                class="frame0-image51"
+              />
+            </div>
+            <div class="frame0-divsourcename26">
+              <span class="frame0-text257">
+                <span>Tataouine | Tunisia</span>
+              </span>
+            </div>
+          </div>
+          <div class="frame0-divnewsiteminfo26">
+            <div class="frame0-link27">
+              <div class="frame0-spanhomenewsitem26">
+                <span class="frame0-text259">
+                  <span>Mazrane Central Processing Facility</span>
+                </span>
+              </div>
+              <div class="frame0-spanhomenewsdescription27">
+                <span class="frame0-text261">
+                  <span>
+                    <span></span>
+                    <br />
+                    <span></span>
+                    <br />
+                    <span>
+                      EAM has been contracted for the preparation of the
+                      classified establishment file for the CPF Mazrane, in
+                      Médenine.
+                    </span>
+                  </span>
+                </span>
+              </div>
+              <span class="frame0-text268"><span>2019</span></span>
+            </div>
+          </div>
+          <div class="frame0-divnewsimg26">
+            <div class="frame0-link-figure12">
+              <img
+                src="public/external/image264125-1fxi-200h.png"
+                alt="image264125"
+                class="frame0-image26"
+              />
+            </div>
+          </div>
+          <div class="frame0-divsourcename27">
+            <span class="frame0-text270"><span>Medenine | Tunisia</span></span>
+          </div>
+          <div class="frame0-item28">
+            <div class="frame0-divnewsiteminfo27"></div>
+            <div class="frame0-divnewsimg27">
+              <img
+                src="public/external/image194125-aful-1200w.png"
+                alt="image194125"
+                class="frame0-image19"
+              />
+              <img
+                src="public/external/rectangle14127-krqi.svg"
+                alt="Rectangle14127"
+                class="frame0-rectangle11"
+              />
+              <span class="frame0-text272">
+                <span>
+                  <span>HAZARD &amp; SAFETY</span>
+                  <br />
+                  <span>PROJECTS</span>
+                </span>
+              </span>
+            </div>
+          </div>
+          <div class="frame0-item29">
+            <div class="frame0-divnewsiteminfo28">
+              <div class="frame0-link28">
+                <div class="frame0-spanhomenewsitem27">
+                  <span class="frame0-text277">
+                    <span>Ghrib Production Center</span>
+                  </span>
+                </div>
+                <div class="frame0-spanhomenewsdescription28">
+                  <span class="frame0-text279">
+                    <span>
+                      <span></span>
+                      <br />
+                      <span>
+                        EAM has been contracted to prepare the classified
+                        establishment file for the Ghrib Production Center, in
+                        Tataouine.
+                      </span>
+                    </span>
+                  </span>
+                </div>
+                <span class="frame0-text284"><span>2017</span></span>
+              </div>
+            </div>
+            <div class="frame0-divnewsimg28">
+              <div class="frame0-link-figure13">
+                <img
+                  src="public/external/image524125-nes-200h.png"
+                  alt="image524125"
+                  class="frame0-image52"
+                />
+              </div>
+            </div>
+            <div class="frame0-divsourcename28">
+              <span class="frame0-text286">
+                <span>Tataouine | Tunisia</span>
+              </span>
+            </div>
+          </div>
+          <div class="frame0-item30">
+            <div class="frame0-divnewsiteminfo29">
+              <div class="frame0-link29">
+                <div class="frame0-spanhomenewsitem28">
+                  <span class="frame0-text288">
+                    <span>
+                      SIA and Stakeholder Analysis for two Drilling well
+                      Activities
+                    </span>
+                  </span>
+                </div>
+                <div class="frame0-spanhomenewsdescription29">
+                  <span class="frame0-text290">
+                    <span>
+                      OMV selected EAM to complete a Social baseline study and
+                      stakeholder needs Assessment for two exploration wells
+                      within Sidi Mansour offshore Block in the gulf of Gabès.
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <span class="frame0-text292"><span>2011</span></span>
+            </div>
+            <div class="frame0-divnewsimg29">
+              <img
+                src="public/external/image624126-l697-200h.png"
+                alt="image624126"
+                class="frame0-image62"
+              />
+            </div>
+            <div class="frame0-divsourcename29">
+              <span class="frame0-text294"><span>Gabes | Tunisia</span></span>
+            </div>
+          </div>
+          <div class="frame0-item31">
+            <div class="frame0-divnewsiteminfo30">
+              <div class="frame0-link30">
+                <div class="frame0-spanhomenewsitem29">
+                  <span class="frame0-text296">
+                    <span>Socio -Economic Baseline of Kerkennah Island</span>
+                  </span>
+                </div>
+                <div class="frame0-spanhomenewsdescription30">
+                  <span class="frame0-text298">
+                    <br />
+                    <span>
+                      A Stakeholder and Socio -Economic Survey (SSES) was
+                      undertaken on Kerkennah Island.
+                    </span>
+                  </span>
+                </div>
+                <span class="frame0-text301"><span>2012</span></span>
+              </div>
+            </div>
+            <div class="frame0-divnewsimg30">
+              <div class="frame0-link-figure14">
+                <img
+                  src="public/external/image634126-ytwr-200h.png"
+                  alt="image634126"
+                  class="frame0-image63"
+                />
+              </div>
+            </div>
+            <div class="frame0-divsourcename30">
+              <span class="frame0-text303"><span>Sfax | Tunisia</span></span>
+            </div>
+          </div>
+          <div class="frame0-divnewsimg31">
+            <img
+              src="public/external/image324126-j94f-1800h.png"
+              alt="image324126"
+              class="frame0-image32"
+            />
+            <img
+              src="public/external/rectangle44126-cyzm.svg"
+              alt="Rectangle44126"
+              class="frame0-rectangle41"
+            />
+            <span class="frame0-text305"><span>SOCIAL PROJECTS</span></span>
+          </div>
+          <div class="frame0-item32">
+            <div class="frame0-divnewsiteminfo31">
+              <div class="frame0-link31">
+                <div class="frame0-spanhomenewsitem30">
+                  <span class="frame0-text307">
+                    <span>
+                      Environmental and social due diligence audit of the Bir El
+                      Haffay solar power plant project in Sidi Bouzid
+                    </span>
+                  </span>
+                </div>
+                <div class="frame0-spanhomenewsdescription31">
+                  <span class="frame0-text309">
+                    <span>
+                      The work done by our team consists of completing a site
+                      visit, full analysis and a stakeholder engagement plan .
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <span class="frame0-text311"><span>2019</span></span>
+            </div>
+            <div class="frame0-divnewsimg32">
+              <img
+                src="public/external/image644126-3oj-200h.png"
+                alt="image644126"
+                class="frame0-image64"
+              />
+            </div>
+            <div class="frame0-divsourcename31">
+              <span class="frame0-text313">
+                <span>Sidi Bouzid | Tunisia</span>
+              </span>
+            </div>
+          </div>
+          <div class="frame0-item33">
+            <div class="frame0-divnewsiteminfo32">
+              <div class="frame0-link32">
+                <div class="frame0-spanhomenewsitem31">
+                  <span class="frame0-text315">
+                    <span>
+                      Social Baseline and Needs Assessment Study for Jenein Sud
+                      Field Development
+                    </span>
+                  </span>
+                </div>
+                <div class="frame0-spanhomenewsdescription32">
+                  <span class="frame0-text317">
+                    <span>
+                      The work done by our team consists of completing a site
+                      visit, full analysis and a stakeholder engagement plan .
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="frame0-divnewsimg33">
+              <img
+                src="public/external/image654126-al4o-200h.png"
+                alt="image654126"
+                class="frame0-image65"
+              />
+            </div>
+            <div class="frame0-divsourcename32">
+              <span class="frame0-text319"><span>Tunisia | Africa</span></span>
+            </div>
+          </div>
+          <div class="frame0-item34">
+            <div class="frame0-divnewsimg34">
+              <div class="frame0-link-figure15">
+                <img
+                  src="public/external/image684126-k0od-1100w.png"
+                  alt="image684126"
+                  class="frame0-image68"
+                />
+                <img
+                  src="public/external/rectangle54126-83u.svg"
+                  alt="Rectangle54126"
+                  class="frame0-rectangle5"
+                />
+                <span class="frame0-text321"><span>OTHER PROJECTS</span></span>
+              </div>
+            </div>
+          </div>
+          <div class="frame0-item35">
+            <div class="frame0-divnewsiteminfo33">
+              <div class="frame0-link33">
+                <div class="frame0-spanhomenewsitem32">
+                  <span class="frame0-text323">
+                    <span>
+                      EIA of the construction and the operation of a sanitary
+                      wastewater treatment plant at the Enfidha cement factory
+                    </span>
+                  </span>
+                </div>
+                <div class="frame0-spanhomenewsdescription33"></div>
+              </div>
+              <span class="frame0-text325">
+                <span>
+                  The work done by EAM consists of the design and dimensioning
+                  of the structures and equipment of the treatment plant, the
+                  preparation of the EIA of the project.
+                </span>
+              </span>
+              <span class="frame0-text327"><span>2003 - 2004</span></span>
+            </div>
+            <div class="frame0-divnewsimg35">
+              <img
+                src="public/external/image664126-zk7-200h.png"
+                alt="image664126"
+                class="frame0-image66"
+              />
+            </div>
+            <div class="frame0-divsourcename33">
+              <span class="frame0-text329"><span>Enfidha | Tunisia</span></span>
+            </div>
+          </div>
+          <div class="frame0-item36">
+            <div class="frame0-divnewsiteminfo34">
+              <div class="frame0-link34">
+                <div class="frame0-spanhomenewsitem33">
+                  <span class="frame0-text331">
+                    <span>
+                      EIA of the Thyna and Sidi Mansour substation connection
+                      project
+                    </span>
+                  </span>
+                </div>
+                <div class="frame0-spanhomenewsdescription34">
+                  <span class="frame0-text333">
+                    <span>
+                      The EIA done includes the regulatory framework of the
+                      project, a presentation of the promoter and the consulting
+                      firm, description of the construction project for the
+                      high-voltage power line (choice of line layout, financial
+                      plan and characteristics of the power line), a baseline
+                      analysis with recognition of the characteristics of the
+                      biophysical and human environment, a project impacts on
+                      the environment, a mitigation measures and an
+                      Environmental Management Plan.
+                    </span>
+                  </span>
+                </div>
+                <span class="frame0-text335"><span>2004</span></span>
+              </div>
+            </div>
+            <div class="frame0-divnewsimg36">
+              <img
+                src="public/external/image674126-7l3e-200h.png"
+                alt="image674126"
+                class="frame0-image67"
+              />
+            </div>
+            <div class="frame0-divsourcename34">
+              <span class="frame0-text337"><span>Sfax | Tunisia</span></span>
+            </div>
+          </div>
+          <div class="frame0-item37">
+            <div class="frame0-divnewsiteminfo35">
+              <div class="frame0-link35">
+                <div class="frame0-spanhomenewsitem34">
+                  <span class="frame0-text339">
+                    <span>EIA for the 500 MW Baraca thermal power station</span>
+                  </span>
+                </div>
+                <div class="frame0-spanhomenewsdescription35">
+                  <span class="frame0-text341">
+                    <span>
+                      The project of the construction of the thermal power plant
+                      with a heat output greater than 300 MW requires an impact
+                      study. The EIA was carried out in accordance with the
+                      World Bank's policy on environmental assessment, the World
+                      Bank Discharge Criteria for Thermal Power Plants, the
+                      criteria of the quality of the air of the World Bank, the
+                      World Health Organization guidelines for air quality and
+                      the World Bank Requirements: Baseline Data and Follow-up.
+                    </span>
+                  </span>
+                </div>
+                <span class="frame0-text343"><span>2002</span></span>
+              </div>
+            </div>
+            <div class="frame0-divnewsimg37">
+              <img
+                src="public/external/image694127-b61a-200h.png"
+                alt="image694127"
+                class="frame0-image69"
+              />
+            </div>
+            <div class="frame0-divsourcename35">
+              <span class="frame0-text345"><span>Sfax | Tunisia</span></span>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
