@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.67" />
+    <title>Document</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Montserrat", sans-serif;
+    }
+    a {
+      text-decoration: none;
+    }
+    a:active {
+      color: black;
+    }
+
+    a:visited {
+      color: black;
+    }
+
+    ul {
+      list-style: none;
+    }
+    li {
+      display: inline-block;
+    }
+    .Navbar {
+      display: flex;
+      background-color: white;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 4Opx;
+      width: 100%;
+      position: fixed;
+      z-index: 9999;
+    }
+    .Navbar ul li a {
+      position: relative;
+      color: #1aacbb;
+    }
+    .Navbar ul li a:hover {
+      color: #aad255;
+    }
+    .Navbar ul li a::before {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: #aad255;
+      transition: width 0.3s ease-in-out;
+    }
+
+    .Navbar ul li a:hover::before {
+      width: 100%;
+    }
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 230px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      animation-duration: 0.3s;
+      animation-fill-mode: forwards;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+      opacity: 1;
+      animation-name: fade-in;
+    }
+
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+    .dropdown-menu li {
+      display: block;
+      text-align: center;
+    }
+
+    .dropdown-menu li a {
+      padding: 8px 12px;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 4px;
+      opacity: 1;
+      transition-delay: 0.2s;
+    }
+
+    .dropdown-menu li {
+      display: block;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .dropdown-menu li a {
+      padding: 8px 12px;
+    }
+
+    .logo {
+      padding-left: 40px;
+      transform: scale(0.95);
+      transition: transform 0.2s ease-out;
+    }
+    .logo:hover {
+      transform: scale(1);
+      cursor: pointer;
+    }
+
+    .menu {
+      font-size: medium;
+      font-weight: bold;
+      display: flex;
+      column-gap: 20px;
+      padding: 50px;
+      align-items: center;
+      color: grey;
+    }
+    .ilink {
+      transition: transform 0.2s ease-out;
+    }
+    .ilink:hover {
+      transform: scale(1.05);
+    }
+    h1 {
+      color: #aad255;
+      font-weight: bolder;
+      font-size: 60px;
+      margin: 0px 0px 30px 0px;
+      padding-left: 35px;
+      text-align: center;
+    }
+    h2 {
+      color: white;
+      font-weight: bolder;
+      font-size: 55px;
+    }
+    .slogan {
+      color: white;
+      font-size: 30px;
+    }
+    h3 {
+      color: #aad255;
+      font-weight: bolder;
+      font-size: 30px;
+      margin: 30px 0px 10px 0px;
+      margin-left: 270px;
+    }
+    .lista {
+      margin-left: 270px;
+    }
+
+    .services_list li {
+      display: block;
+    }
+    .container {
+      position: relative;
+      width: 100%;
+      height: 350px;
+      margin: 30px 0px;
+    }
+    .image-overlay::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    .image-overlay {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .image-overlay img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.9;
+    }
+    .txt_on_top {
+      position: absolute;
+      top: 55%;
+      left: 20%;
+      overflow: hidden;
+    }
+    .description {
+      padding-left: 50px;
+      margin: 0px 0px 30px 0px;
+    }
+    .services {
+      margin-bottom: 50px;
+      padding-top: 150px;
+    }
+
+    footer span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0px;
+    }
+    .footer img {
+      display: block;
+      margin: auto;
+    }
+    .footer a:visited {
+      color: black;
+    }
+    .footer a:hover {
+      color: #aad255;
+    }
+    .Contact {
+      margin-top: 60px ;
+    }
+    .About {
+      margin-top: 0px;
+    }
+    .About img {
+      opacity: 30%;
+    }
+    form {
+      display: flex;
+      border: none;
+      outline: none;
+      flex-direction: column;
+      padding: 0px 350px;
+    }
+
+    form label {
+      display: block;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 10px 0px 5px 0px;
+      width: 100%;
+    }
+    form button {
+      background: black;
+      color: white;
+      padding: 10px 30px;
+      font-size: medium;
+      font-weight: bold;
+      border: none;
+      margin-top: 15px;
+      display: block;
+      margin-bottom: 100px;
+    }
+    @keyframes wiggle {
+      0% {
+        transform: rotate(0deg);
+      }
+      25% {
+        transform: rotate(-2deg);
+      }
+      75% {
+        transform: rotate(2deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+    form button:hover {
+      cursor: pointer;
+      animation: wiggle 0.5s ease-in-out 2;
+    }
+    form input {
+      height: 40px;
+      border-top: 1px #aad255;
+      border-left: none;
+      border-right: none;
+      margin-bottom: 10px;
+    }
+    input:focus {
+      border-color: #aad255;
+    }
+    textarea {
+      margin: 5px 0px;
+      resize: none;
+      border-top: 1cm;
+      border-left: none;
+      border-right: none;
+    }
+    .formulaire {
+      color:#aad255;
+      text-align: center  ;
+      margin-bottom: 30px;
+    }
+  </style>
+
+  <body>
+    <header>
+      <div class="Navbar">
+        <div class="logo">
+          <a href="">
+            <img src="logo_eam.png" width="90" />
+          </a>
+        </div>
+        <ul class="menu">
+          <li class="ilink"><a href="#home-section">Home</a></li>
+          <li class="ilink"><a href="#about-section">About</a></li>
+          <li class="dropdown">
+            <a href="#services-section">Services</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#"
+                  >Environmental Impact <br />Assessment & Management</a
+                >
+              </li>
+              <li><a href="#">Renewable Energies</a></li>
+              <li><a href="#">Oil & Gas</a></li>
+              <li><a href="#">Harbor & Terminal</a></li>
+              <li><a href="#">Hazard & Safety</a></li>
+              <li><a href="#">Social & Stakeholder Engagement</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#projects-section">Projects</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Wind & Solar Energies</a></li>
+              <li><a href="#">Harbors & Terminals</a></li>
+              <li><a href="#">Oil & Gas</a></li>
+              <li><a href="#">Hazard & Safety</a></li>
+              <li>
+                <a href="#">Risk Assessment & Contaminated Sites Management</a>
+              </li>
+              <li><a href="#">Social Projects</a></li>
+              <li>
+                <a href="#"><u>Other Projects</u></a>
+              </li>
+            </ul>
+          </li>
+          <li class="ilink"><a href="#clients-section">Clients</a></li>
+          <li class="ilink"><a href="#contact-section">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+    <div class="services">
+      <h1>Our Services</h1>
+      <span class="description"
+        >Striving to exceed your expectations and to develop a long term
+        relationship based on trust.</span
+      ><br />
+      <span class="description"
+        >Understanding your needs and the importance of providing cost effective
+        and reliable solutions create the foundation of our values.</span
+      >
+
+      <div class="container">
+        <div class="image-overlay">
+          <img src="./Images/offshore_platform.jpg" />
+        </div>
+        <div class="txt_on_top">
+          <h2>Oil & GAS</h2>
+          <span class="slogan">Fueling Progress, Energizing the World</span>
+        </div>
+      </div>
+      <div class="offer">
+        <h3>What we offer</h3>
+        <div class="lista">
+          <ul class="services_list">
+            <li>Offshore and onshore oil and gas production facilities</li>
+            <li>Drilling activities</li>
+            <li>Exploration wells</li>
+            <li>Well reconditioning</li>
+            <li>Simulation wells</li>
+            <li>Formal Hazard Studies and Emergency Response Procedures</li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="image-overlay">
+          <img src="./Images/1030_decarbonizing_energy_systems_feat.jpg" />
+        </div>
+        <div class="txt_on_top">
+          <h2>Renewable Energies</h2>
+          <span class="slogan">Empowering the Future with Clean Energy</span>
+        </div>
+      </div>
+      <div class="offer">
+        <h3>What we offer</h3>
+        <div class="lista">
+          <ul class="services_list">
+            <li>Environmental and Social Impact studies</li>
+            <li>
+              Impact Assessment Gap Assessments against the standards of
+              International Funding Organizations
+            </li>
+            <li>Feasibility Studies</li>
+            <li>
+              Monitoring of biodiversity, especially birds and chiroptera (bats)
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="image-overlay">
+          <img src="./Images/607f4d330f7a43883cce1238_middle_harbor.jpg" />
+        </div>
+        <div class="txt_on_top">
+          <h2>Harbor & Terminal</h2>
+          <span class="slogan">Gateway to Global Connectivity</span>
+        </div>
+      </div>
+      <div class="offer">
+        <h3>What we offer</h3>
+        <div class="lista">
+          <ul class="services_list">
+            <li>Marine infrastructure analysis and design</li>
+            <li>Dredging and rehabilitation projects</li>
+            <li>Berth construction</li>
+            <li>Revetments</li>
+            <li>
+              Coastal and marine environment analysis (wind, waves, currents,
+              and sediment transport)
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="image-overlay">
+          <img
+            src="./Images/41586_2017_Article_BFnature201722016_Figa_HTML.jpg"
+          />
+        </div>
+        <div class="txt_on_top">
+          <h2>Environmental Impact</h2>
+          <span class="slogan">Shaping a Sustainable Future</span>
+        </div>
+      </div>
+      <div class="offer">
+        <h3>What we offer</h3>
+        <div class="lista">
+          <ul class="services_list">
+            <li>
+              Environmental and Social Impact Assessment according to IFC
+              performances
+            </li>
+            <li>
+              Impact studies on the environment for electricity production
+              (power plants, wind farms, and solar power plants) and
+              transmission
+            </li>
+            <li>Environmental and Social Baseline Surveys</li>
+            <li>Air dispersion modeling</li>
+            <li>Pollutants Dispersion Modeling in aquatic environment</li>
+            <li>Oil spill modeling</li>
+            <li>Oil spill contingency plan</li>
+            <li>Environmental Due Diligence</li>
+            <li>Industrial Risk Analysis</li>
+            <li>Contaminated Site Management</li>
+            <li>Health Risk Assessment</li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="image-overlay">
+          <img src="./Images/health_risk_insurance.jpg" />
+        </div>
+        <div class="txt_on_top">
+          <h2>Hazard & Safety</h2>
+          <span class="slogan">Safeguarding Lives, Securing Futures</span>
+        </div>
+      </div>
+      <div class="offer">
+        <h3>What we offer</h3>
+        <div class="lista">
+          <ul class="services_list">
+            <li>
+              Formal Hazard Studies and Emergency Response Procedures for
+              petroleum activities
+            </li>
+            <li>
+              Central Processing Facilities and terminal site analysis and
+              safety measures
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="image-overlay">
+          <img src="./Images/meeting_corp.png" />
+        </div>
+        <div class="txt_on_top">
+          <h2>Social Engagement</h2>
+          <span class="slogan">Connecting Communities, Amplifying Voices</span>
+        </div>
+      </div>
+      <div class="offer">
+        <h3>What we offer</h3>
+        <div class="lista">
+          <ul class="services_list">
+            <li>
+              Identification studies of stakeholders and social projects for the
+              population
+            </li>
+            <li>Social studies and CSR projects</li>
+            <li>Public consultations</li>
+            <li>Stakeholder engagement</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="Contact" id="contact-section">
+      <h2 class="formulaire">Contact Us</h2>
+      <form action="/submit-form" method="POST">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Enter your Name"
+        />
+        <label for="Email">Email</label>
+        <input
+          type="text"
+          name="email"
+          id="email"
+          placeholder="Enter your Email"
+        />
+        <label for="subject">Subject</label>
+        <input
+          type="text"
+          name="subject"
+          id="subject"
+          placeholder="Type the Subject"
+        />
+        <label for="Message">Message</label>
+        <textarea
+          name="message"
+          id="message"
+          rows="5"
+          placeholder="Type your message here"
+        ></textarea>
+        <button type="submit" class="submit">Submit</button>
+      </form>
+    </div>
+    <footer>
+      <div class="footer">
+        <a href="mailto:contact@eamtunisia.com" target="_blank">
+          <span>contact@eamtunisia.com</span>
+        </a>
+        <span>© All Rights Reserved</span>
+        <a href="https://www.facebook.com/juniorenit">
+          <span>ENIT Junior Entreprise</span>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
