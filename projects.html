@@ -129,10 +129,13 @@
         width: 100%;
         position: relative;
         z-index: 9999;
+        font: "Montserrat";
       }
       .Navbar ul li a {
         position: relative;
         color: #1aacbb;
+        font: "Montserrat";
+
       }
       .Navbar ul li a:hover {
         color: #aad255;
@@ -165,6 +168,8 @@
         opacity: 0;
         animation-duration: 0.3s;
         animation-fill-mode: forwards;
+        font: "Montserrat";
+
       }
 
       .dropdown:hover .dropdown-menu {
@@ -178,16 +183,18 @@
           opacity: 0;
         }
         50% {
-          opacity: 1;
+          opacity: 0.5;
         }
         100% {
-          opacity: 0;
+          opacity: 1;
         }
       }
 
       .dropdown-menu li {
         display: block;
         text-align: center;
+        font-family: "Montserrat";
+
       }
 
       .dropdown-menu li a {
@@ -366,16 +373,16 @@
           <li class="dropdown">
             <a href="projects.html">Projects</a>
             <ul class="dropdown-menu">
-              <li><a href="#">Wind & Solar Energies</a></li>
-              <li><a href="#">Harbors & Terminals</a></li>
-              <li><a href="#">Oil & Gas</a></li>
-              <li><a href="#">Hazard & Safety</a></li>
+              <li><a href="#wind">Wind & Solar Energies</a></li>
+              <li><a href="#harbor">Harbors & Terminals</a></li>
+              <li><a href="#oil">Oil & Gas</a></li>
+              <li><a href="#safety">Hazard & Safety</a></li>
               <li>
-                <a href="#">Risk Assessment & Contaminated Sites Management</a>
+                <a href="#risk">Risk Assessment & Contaminated Sites Management</a>
               </li>
-              <li><a href="#">Social Projects</a></li>
+              <li><a href="#social">Social Projects</a></li>
               <li>
-                <a href="projects.html"><u>Other Projects</u></a>
+                <a href="#other"><u>Other Projects</u></a>
               </li>
             </ul>
           </li>
@@ -407,7 +414,7 @@
                         An overview of EAM projects in Tunisia and worldwide:
                       </span>
                     </span>
-                    <div class="frame0-item">
+                    <div class="frame0-item" id="harbor">
                       <img
                         src="public/external/image134123-z4h-900w.png"
                         alt="image134123"
@@ -420,7 +427,7 @@
                       />
                       <span class="frame0-text005">
                         <span>
-                          <span>HARBOUR &amp; TERMINAL</span>
+                          <span>HARBOR &amp; TERMINAL</span>
                           <br />
                           <span>PROJECTS</span>
                         </span>
@@ -722,7 +729,7 @@
             </div>
             <div class="frame0-item07">
               <div class="frame0-divnewsimg08">
-                <div class="frame0-link-figure02">
+                <div class="frame0-link-figure02" id="wind">
                   <img
                     src="public/external/image54122-gbz-1200w.png"
                     alt="image54122"
@@ -1081,7 +1088,7 @@
                 </div>
               </div>
             </div>
-            <div class="frame0-divnewsimg16">
+            <div class="frame0-divnewsimg16" id="risk">
               <img
                 src="public/external/image314126-rjzh-600w.png"
                 alt="image314126"
@@ -1131,7 +1138,7 @@
           </div>
           <div class="frame0-item17">
             <div class="frame0-divnewsimg17">
-              <div class="frame0-link-figure09">
+              <div class="frame0-link-figure09" id="oil">
                 <img
                   src="public/external/image174124-0red-1600w.png"
                   alt="image174124"
@@ -1515,7 +1522,7 @@
           </div>
           <div class="frame0-item28">
             <div class="frame0-divnewsiteminfo27"></div>
-            <div class="frame0-divnewsimg27">
+            <div class="frame0-divnewsimg27" id="safety">
               <img
                 src="public/external/image194125-aful-1200w.png"
                 alt="image194125"
@@ -1641,11 +1648,11 @@
               <span class="frame0-text303"><span>Sfax | Tunisia</span></span>
             </div>
           </div>
-          <div class="frame0-divnewsimg31">
+          <div class="frame0-divnewsimg31" >
             <img
               src="public/external/image324126-j94f-1800h.png"
               alt="image324126"
-              class="frame0-image32"
+              class="frame0-image32" id="social"
             />
             <img
               src="public/external/rectangle44126-cyzm.svg"
@@ -1723,16 +1730,16 @@
           </div>
           <div class="frame0-item34">
             <div class="frame0-divnewsimg34">
-              <div class="frame0-link-figure15">
+              <div class="frame0-link-figure15" >
                 <img
                   src="public/external/image684126-k0od-1100w.png"
                   alt="image684126"
-                  class="frame0-image68"
+                  class="frame0-image68" 
                 />
                 <img
                   src="public/external/rectangle54126-83u.svg"
                   alt="Rectangle54126"
-                  class="frame0-rectangle5"
+                  class="frame0-rectangle5" id="other"
                 />
                 <span class="frame0-text321"><span>OTHER PROJECTS</span></span>
               </div>
