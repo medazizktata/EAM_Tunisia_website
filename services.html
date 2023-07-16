@@ -88,10 +88,10 @@
         opacity: 0;
       }
       50% {
-        opacity: 1;
+        opacity: 0.5;
       }
       100% {
-        opacity: 0;
+        opacity: 1;
       }
     }
 
@@ -109,6 +109,8 @@
       margin-top: 4px;
       opacity: 1;
       transition-delay: 0.2s;
+      cursor: pointer;
+
     }
 
     .dropdown-menu li {
@@ -128,7 +130,6 @@
     }
     .logo:hover {
       transform: scale(1);
-      cursor: pointer;
     }
 
     .menu {
@@ -212,6 +213,8 @@
     .description {
       padding-left: 50px;
       margin: 0px 0px 30px 0px;
+        margin-left: 205px;
+
     }
     .services {
       margin-bottom: 50px;
@@ -327,30 +330,30 @@
             <a href="services.html">Services</a>
             <ul class="dropdown-menu">
               <li>
-                <a href="#"
+                <a href="#environment"
                   >Environmental Impact <br />Assessment & Management</a
                 >
               </li>
-              <li><a href="#">Renewable Energies</a></li>
-              <li><a href="#">Oil & Gas</a></li>
-              <li><a href="#">Harbor & Terminal</a></li>
-              <li><a href="#">Hazard & Safety</a></li>
-              <li><a href="#">Social & Stakeholder Engagement</a></li>
+              <li><a href="#renewable">Renewable Energies</a></li>
+              <li><a href="#oil">Oil & Gas</a></li>
+              <li><a href="#harbor">Harbor & Terminal</a></li>
+              <li><a href="#safety">Hazard & Safety</a></li>
+              <li><a href="#social">Social & Stakeholder Engagement</a></li>
             </ul>
           </li>
           <li class="dropdown">
             <a href="projects.html">Projects</a>
             <ul class="dropdown-menu">
-              <li><a href="#">Wind & Solar Energies</a></li>
-              <li><a href="#">Harbors & Terminals</a></li>
-              <li><a href="#">Oil & Gas</a></li>
-              <li><a href="#">Hazard & Safety</a></li>
+              <li><a href="projects.html#wind">Wind & Solar Energies</a></li>
+              <li><a href="projects.html#harbor">Harbors & Terminals</a></li>
+              <li><a href="projects.html#oil">Oil & Gas</a></li>
+              <li><a href="projects.html#safety">Hazard & Safety</a></li>
               <li>
-                <a href="#">Risk Assessment & Contaminated Sites Management</a>
+                <a href="projects.html#risk">Risk Assessment & Contaminated Sites Management</a>
               </li>
-              <li><a href="#">Social Projects</a></li>
+              <li><a href="projects.html#social">Social Projects</a></li>
               <li>
-                <a href="projects.html"><u>Other Projects</u></a>
+                <a href="projects.html#other"><u>Other Projects</u></a>
               </li>
             </ul>   
           </li>
@@ -372,9 +375,9 @@
 
       <div class="container">
         <div class="image-overlay">
-          <img src="./Images/offshore_platform.jpg" />
+          <img src="./Images/offshore_platform.jpg" id="oil"/>
         </div>
-        <div class="txt_on_top">
+        <div class="txt_on_top" >
           <h2>Oil & GAS</h2>
           <span class="slogan">Fueling Progress, Energizing the World</span>
         </div>
@@ -394,7 +397,7 @@
       </div>
       <div class="container">
         <div class="image-overlay">
-          <img src="./Images/1030_decarbonizing_energy_systems_feat.jpg" />
+          <img src="./Images/1030_decarbonizing_energy_systems_feat.jpg"  id="renewable"/>
         </div>
         <div class="txt_on_top">
           <h2>Renewable Energies</h2>
@@ -419,7 +422,7 @@
       </div>
       <div class="container">
         <div class="image-overlay">
-          <img src="./Images/607f4d330f7a43883cce1238_middle_harbor.jpg" />
+          <img src="./Images/607f4d330f7a43883cce1238_middle_harbor.jpg"  id="harbor"/>
         </div>
         <div class="txt_on_top">
           <h2>Harbor & Terminal</h2>
@@ -444,10 +447,10 @@
       <div class="container">
         <div class="image-overlay">
           <img
-            src="./Images/41586_2017_Article_BFnature201722016_Figa_HTML.jpg"
+            src="./Images/41586_2017_Article_BFnature201722016_Figa_HTML.jpg" id="environment"
           />
         </div>
-        <div class="txt_on_top">
+        <div class="txt_on_top" >
           <h2>Environmental Impact</h2>
           <span class="slogan">Shaping a Sustainable Future</span>
         </div>
@@ -478,8 +481,8 @@
         </div>
       </div>
       <div class="container">
-        <div class="image-overlay">
-          <img src="./Images/health_risk_insurance.jpg" />
+        <div class="image-overlay" >
+          <img src="./Images/health_risk_insurance.jpg"   id="safety"/>
         </div>
         <div class="txt_on_top">
           <h2>Hazard & Safety</h2>
@@ -503,9 +506,9 @@
       </div>
       <div class="container">
         <div class="image-overlay">
-          <img src="./Images/meeting_corp.png" />
+          <img src="./Images/meeting_corp.png" id="social" />
         </div>
-        <div class="txt_on_top">
+        <div class="txt_on_top" >
           <h2>Social Engagement</h2>
           <span class="slogan">Connecting Communities, Amplifying Voices</span>
         </div>
