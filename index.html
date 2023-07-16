@@ -90,10 +90,10 @@
         opacity: 0;
       }
       50% {
-        opacity: 1;
+        opacity: 0.5;
       }
       100% {
-        opacity: 0;
+        opacity: 1;
       }
     }
 
@@ -182,7 +182,7 @@
     }
     .aboutus {
       position: absolute;
-      top: 14%;
+      top: 16%;
       left: -1000px;
       background-color: rgba(255, 255, 255, 0);
       padding: 100px 200px 100px 50px;
@@ -426,6 +426,31 @@
       .About img {
         opacity: 30%;
       }
+      .services {
+        text-align: center;
+      }
+      
+      .services h2{
+        transition: all 0.3s ease-in-out;
+        text-decoration: none;
+        display: inline-block;
+      }
+      .services h2:hover {
+        color: #1aacbb;
+        transform: scale(1.05);
+      }
+      .services h2::after {
+      
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background-color: #1aacbb;
+        transition: width 0.3s;
+      }
+      .services h2:hover::after {
+        width: 100%;
+      }
   </style>
   <script>
     const navbarLinks = document.querySelectorAll('.ilink a');
@@ -461,24 +486,24 @@
           <li class="dropdown">
             <a href="#services-section">Services</a>
             <ul class="dropdown-menu">
-              <li><a href="#">Environmental Impact <br>Assessment & Management</a></li>
-              <li><a href="#">Renewable Energies</a></li>
-              <li><a href="#">Oil & Gas</a></li>
-              <li><a href="#">Harbor & Terminal</a></li>
-              <li><a href="#">Hazard & Safety</a></li>
-              <li><a href="#">Social & Stakeholder Engagement</a></li>
+              <li><a href="services.html#environment">Environmental Impact <br>Assessment & Management</a></li>
+              <li><a href="services.html#renewable">Renewable Energies</a></li>
+              <li><a href="services.html#oil">Oil & Gas</a></li>
+              <li><a href="services.html#harbor">Harbor & Terminal</a></li>
+              <li><a href="services.html#safety">Hazard & Safety</a></li>
+              <li><a href="services.html#social">Social & Stakeholder Engagement</a></li>
             </ul>
           </li>
           <li class="dropdown">
             <a href="projects.html">Projects</a>
             <ul class="dropdown-menu">
-              <li><a href="#">Wind & Solar Energies</a></li>
-              <li><a href="#">Harbors & Terminals</a></li>
-              <li><a href="#">Oil & Gas</a></li>
-              <li><a href="#">Hazard & Safety</a></li>
-              <li><a href="#">Risk Assessment & Contaminated Sites Management</a></li>
-              <li><a href="#">Social Projects</a></li>
-              <li><a href="projects.html"><u>Other Projects</u></a></li>
+              <li><a href="projects.html#wind">Wind & Solar Energies</a></li>
+              <li><a href="projects.html#harbor">Harbors & Terminals</a></li>
+              <li><a href="projects.html#oil">Oil & Gas</a></li>
+              <li><a href="projects.html#safety">Hazard & Safety</a></li>
+              <li><a href="projects.html#risk">Risk Assessment & Contaminated Sites Management</a></li>
+              <li><a href="projects.html#social">Social Projects</a></li>
+              <li><a href="projects.html#others"><u>Other Projects</u></a></li>
             </ul>
           </li>
           <li class="ilink"><a href="#clients-section">Clients</a></li>
